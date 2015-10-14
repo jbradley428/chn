@@ -1,0 +1,383 @@
+/**********************
+****** Variables ******
+**********************/
+/*#6776ad*/
+/*#6776ad*/
+/*#bbcb73*/
+/*#bbcb73*/
+/**********************
+******* Mixins ********
+**********************/
+/**********************
+******** Sass *********
+**********************/
+/* line 75, ../sass/styles.scss */
+body {
+  background: #002157;
+}
+/* line 80, ../sass/styles.scss */
+body header .navbar-toggle {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: #373477;
+  box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  float: none;
+}
+/* line 90, ../sass/styles.scss */
+body header .navbar-toggle .icon-bar {
+  background: #fff;
+}
+/* line 95, ../sass/styles.scss */
+body header .navbar-collapse {
+  /*weird jumo, may not be right selector to target*/
+  margin-top: 20px;
+}
+/* line 99, ../sass/styles.scss */
+body header #brand {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+/* line 105, ../sass/styles.scss */
+body header .contact {
+  text-align: center;
+}
+/* line 108, ../sass/styles.scss */
+body header .contact p, body header .contact a {
+  color: #fff;
+}
+/* line 112, ../sass/styles.scss */
+body header .contact button {
+  color: #fff;
+  background: #002157;
+  width: 150px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
+  box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
+  font-size: 8px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 10px;
+}
+/* line 127, ../sass/styles.scss */
+body header .contact .btn:hover {
+  background: rgba(103, 118, 173, 0.5);
+  color: #fff;
+  border: 1px solid #373477;
+}
+/* line 138, ../sass/styles.scss */
+body header ul.nav li :hover {
+  background: rgba(103, 118, 173, 0.5);
+  box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
+}
+/* line 143, ../sass/styles.scss */
+body header ul.nav li a {
+  color: #fff;
+  padding: 10px 15px;
+  text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+/* line 152, ../sass/styles.scss */
+body header .navbar-nav {
+  margin: 0;
+}
+/* line 159, ../sass/styles.scss */
+body main {
+  background: #373477;
+  border-top: 4px solid #bbcb72;
+}
+/* line 163, ../sass/styles.scss */
+body main h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.6em;
+  text-align: center;
+  text-align: center;
+}
+/* line 168, ../sass/styles.scss */
+body main h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.6em;
+}
+/* line 172, ../sass/styles.scss */
+body main .inner-content {
+  padding: 0 15px;
+  position: relative;
+}
+/* line 176, ../sass/styles.scss */
+body main .inner-content h2 {
+  background: rgba(187, 203, 114, 0.5);
+  margin: 0 -15px;
+  padding: 0 15px;
+}
+/* line 183, ../sass/styles.scss */
+body main .message {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.6em;
+  text-align: center;
+  margin: 30px 0;
+}
+/* line 189, ../sass/styles.scss */
+body main .box {
+  background: #bbcb72;
+  min-height: 520px;
+  border-radius: 3px;
+}
+/* line 194, ../sass/styles.scss */
+body main .box img {
+  padding-right: -15px;
+  padding-left: -15px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  margin-bottom: -25px;
+}
+/* line 202, ../sass/styles.scss */
+body main .box h2, body main .box p {
+  color: #373477;
+}
+/* line 206, ../sass/styles.scss */
+body main .box .tagline {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.6em;
+  color: #373477;
+  font-style: normal;
+  font-weight: 700;
+}
+/* line 214, ../sass/styles.scss */
+body footer {
+  color: #fff;
+  background: #373477;
+}
+/* line 219, ../sass/styles.scss */
+body footer .inner-foot {
+  border-top: 1px solid #fff;
+  padding: 10px 0 90px 0;
+}
+/* line 223, ../sass/styles.scss */
+body footer .inner-foot #foot-contact,
+body footer .inner-foot #copyright {
+  text-align: center;
+}
+/* line 229, ../sass/styles.scss */
+body footer a {
+  color: #fff;
+}
+/* line 232, ../sass/styles.scss */
+body footer a :hover {
+  color: #fff;
+}
+
+/* Bootstrap Overrides */
+/* line 240, ../sass/styles.scss */
+.container-fluid {
+  padding: 0;
+}
+
+/* line 241, ../sass/styles.scss */
+[class*="col"] {
+  padding: 0;
+}
+
+/* line 242, ../sass/styles.scss */
+.row {
+  margin: 0;
+}
+
+/**********************
+**** Media Queries ****
+**********************/
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* line 6, ../sass/partials/_media-queries.scss */
+  body {
+    background: #002157;
+  }
+  /* line 11, ../sass/partials/_media-queries.scss */
+  body header .navbar-toggle {
+    background: #373477;
+    box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+  /* line 15, ../sass/partials/_media-queries.scss */
+  body header .navbar-toggle .icon-bar {
+    background: #fff;
+  }
+  /* line 20, ../sass/partials/_media-queries.scss */
+  body header #brand {
+    display: inline-block;
+    margin: 0 0 10px 0;
+  }
+  /* line 25, ../sass/partials/_media-queries.scss */
+  body header .contact {
+    margin-top: 40px;
+    text-align: right;
+  }
+  /* line 30, ../sass/partials/_media-queries.scss */
+  body header .contact p, body header .contact a {
+    color: #fff;
+  }
+  /* line 34, ../sass/partials/_media-queries.scss */
+  body header .contact button {
+    color: #fff;
+    background: #002157;
+    width: 150px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
+    font-size: 8px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 10px;
+  }
+  /* line 49, ../sass/partials/_media-queries.scss */
+  body header .contact .btn:hover {
+    background: rgba(103, 118, 173, 0.5);
+    color: #fff;
+    border: 0;
+  }
+  /* line 60, ../sass/partials/_media-queries.scss */
+  body header ul.nav li :hover {
+    background: rgba(103, 118, 173, 0.5);
+    border-radius: 20px;
+    box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+  /* line 66, ../sass/partials/_media-queries.scss */
+  body header ul.nav li a {
+    color: #fff;
+    padding: 10px 15px;
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
+  }
+  /* line 74, ../sass/partials/_media-queries.scss */
+  body header .navbar-nav {
+    margin: 0;
+  }
+  /* line 81, ../sass/partials/_media-queries.scss */
+  body main {
+    background: #373477;
+    border-top: 4px solid #bbcb72;
+  }
+  /* line 85, ../sass/partials/_media-queries.scss */
+  body main h1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.6em;
+    text-align: center;
+    text-align: center;
+    padding: 0 40px !important;
+  }
+  /* line 91, ../sass/partials/_media-queries.scss */
+  body main h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.6em;
+  }
+  /* line 95, ../sass/partials/_media-queries.scss */
+  body main .inner-content {
+    padding: 0 15px;
+    position: relative;
+  }
+  /* line 99, ../sass/partials/_media-queries.scss */
+  body main .inner-content h2 {
+    background: rgba(187, 203, 114, 0.5);
+    margin: 0 -15px;
+    padding: 0 15px;
+  }
+  /* line 106, ../sass/partials/_media-queries.scss */
+  body main .message {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.6em;
+    text-align: center;
+    margin: 30px 0 90px 0;
+    padding-left: 50px;
+  }
+  /* line 113, ../sass/partials/_media-queries.scss */
+  body main .box {
+    background: #bbcb72;
+    margin-right: 20px;
+    min-height: 520px;
+    border-radius: 3px;
+  }
+  /* line 119, ../sass/partials/_media-queries.scss */
+  body main .box img {
+    padding-right: -15px;
+    padding-left: -15px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    margin-bottom: -25px;
+  }
+  /* line 127, ../sass/partials/_media-queries.scss */
+  body main .box h2, body main .box p {
+    color: #373477;
+  }
+  /* line 131, ../sass/partials/_media-queries.scss */
+  body main .box .tagline {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.6em;
+    color: #373477;
+    font-style: normal;
+    font-weight: 700;
+  }
+  /* line 137, ../sass/partials/_media-queries.scss */
+  body footer {
+    color: #fff;
+    background: #373477;
+  }
+  /* line 142, ../sass/partials/_media-queries.scss */
+  body footer .inner-foot {
+    border-top: 1px solid #fff;
+    padding: 10px 0 90px 0;
+  }
+  /* line 146, ../sass/partials/_media-queries.scss */
+  body footer .inner-foot #foot-contact {
+    text-align: initial;
+  }
+  /* line 150, ../sass/partials/_media-queries.scss */
+  body footer .inner-foot #copyright {
+    text-align: right;
+  }
+  /* line 155, ../sass/partials/_media-queries.scss */
+  body footer a {
+    color: #fff;
+  }
+  /* line 159, ../sass/partials/_media-queries.scss */
+  body footer a:hover {
+    color: #fff;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: 992px) { ... }*/
+/* Large devices (large desktops, 1200px and up) */
+/*@media (min-width: 1200px) { ... }*/

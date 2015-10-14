@@ -1,0 +1,54 @@
+@mixin heading1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: $white;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  line-height:  1.6em;
+  text-align: center;
+}
+
+@mixin heading2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: $white;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  line-height:  1.6em;
+}
+
+@mixin navs {
+  font-family: Helvetica, Verdana, Arial;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: .1em;
+}
+
+@mixin basic {
+  font-family: Helvetica, Verdana, Arial;
+  font-size: 14px;
+  line-height: 1.6em;
+}
+
+@mixin quote {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.6em;
+}
+
+@mixin blurb {
+  @include quote;
+  color: $navy;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin txt-shadow {
+  text-shadow: 4px 4px 15px rgba(0,0,0,0.7);
+}
+
+@mixin bx-shadow {
+  box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
+}
