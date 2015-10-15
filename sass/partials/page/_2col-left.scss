@@ -1,0 +1,12 @@
+body {
+
+  main {
+
+    .basic {
+
+      p {
+        @include basic;
+      }
+    }
+  }
+}

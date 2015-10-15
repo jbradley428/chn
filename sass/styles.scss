@@ -45,6 +45,7 @@ $lt-green-op: rgba(187, 203, 114, 0.5); /*#bbcb73*/
   font-family: Helvetica, Verdana, Arial;
   font-size: 14px;
   line-height: 1.6em;
+  color: $white;
 }
 
 @mixin quote {
@@ -74,6 +75,7 @@ $lt-green-op: rgba(187, 203, 114, 0.5); /*#bbcb73*/
 **********************/
 body {
   background: $dk-blue;
+  color: $white;
 
   header {
 
@@ -158,6 +160,7 @@ body {
 
   main {
     background: $navy;
+    color: $white;
     border-top: 4px solid $lt-green;
 
     h1 {
@@ -167,6 +170,10 @@ body {
 
     h2 {
       @include heading2;
+    }
+
+    p {
+      color: $white;
     }
 
     .inner-content {
@@ -208,7 +215,17 @@ body {
       }
     }
 
+    .img-content { /*two-column-left content area styling*/
 
+      p {
+        color: $white !important;
+      }
+
+      img.feature-image {
+        display: inline-block !important;
+        float: right !important;
+      }
+    }
   }
 
   footer {
@@ -240,6 +257,7 @@ body {
 .container-fluid { padding: 0; }
 [class*="col"] { padding: 0; }
 .row { margin: 0; }
+body { color: #fff;}
 
 /**********************
 **** Media Queries ****
