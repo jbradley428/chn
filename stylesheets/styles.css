@@ -1,57 +1,61 @@
-/**********************
-****** Variables ******
-**********************/
+/* ==========================================================================
+   Variables
+   Non-Bootstrap, site specific variables
+   ========================================================================== */
+/* Typography */
+/* Fonts */
+/* Colors */
 /*#6776ad*/
 /*#6776ad*/
 /*#bbcb73*/
 /*#bbcb73*/
-/**********************
-******* Mixins ********
-**********************/
-/**********************
-******** Sass *********
-**********************/
-/* line 76, ../sass/styles.scss */
+/* ==========================================================================
+   BASE
+   - Styles for default base elements
+   - Boostrap grid overrides
+   ========================================================================== */
+/* line 8, ../sass/partials/_base.scss */
 body {
-  background: #002157;
+  font-family: Helvetica, Verdana, Arial;
+  font-size: 14px;
+  line-height: 1.6;
   color: #fff;
-}
-/* line 82, ../sass/styles.scss */
-body header .navbar-toggle {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  margin-top: 20px;
   background: #373477;
-  box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  float: none;
 }
-/* line 92, ../sass/styles.scss */
-body header .navbar-toggle .icon-bar {
-  background: #fff;
+
+/* line 16, ../sass/partials/_base.scss */
+a {
+  color: #b0daff;
+  text-decoration: none;
 }
-/* line 97, ../sass/styles.scss */
-body header .navbar-collapse {
-  /*weird jumo, may not be right selector to target*/
-  margin-top: 20px;
+/* line 19, ../sass/partials/_base.scss */
+a:hover {
+  color: #bbcb72;
+  text-decoration: none;
 }
-/* line 101, ../sass/styles.scss */
-body header #brand {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 10px;
-}
-/* line 107, ../sass/styles.scss */
-body header .contact {
-  text-align: center;
-}
-/* line 110, ../sass/styles.scss */
-body header .contact p, body header .contact a {
+
+/* line 29, ../sass/partials/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5;
+  font-style: italic;
+  font-weight: 700;
   color: #fff;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 12px;
 }
-/* line 114, ../sass/styles.scss */
-body header .contact button {
+
+/* line 37, ../sass/partials/_base.scss */
+h1 {
+  font-size: 20px;
+}
+
+/* line 38, ../sass/partials/_base.scss */
+h2 {
+  font-size: 18px;
+}
+
+/* line 49, ../sass/partials/_base.scss */
+button.btn {
   color: #fff;
   background: #002157;
   width: 150px;
@@ -65,100 +69,163 @@ body header .contact button {
   font-weight: 700;
   padding: 10px;
 }
-/* line 129, ../sass/styles.scss */
-body header .contact .btn:hover {
+/* line 63, ../sass/partials/_base.scss */
+button.btn:hover {
   background: rgba(103, 118, 173, 0.5);
   color: #fff;
   border: 1px solid #373477;
 }
-/* line 140, ../sass/styles.scss */
-body header ul.nav li :hover {
+
+/* Bootstrap Overrides */
+/* line 72, ../sass/partials/_base.scss */
+.container-fluid {
+  padding: 0;
+}
+
+/* line 73, ../sass/partials/_base.scss */
+[class*="col"] {
+  padding: 0;
+}
+
+/* line 74, ../sass/partials/_base.scss */
+.row {
+  margin: 0;
+}
+
+/* line 1, ../sass/partials/_header.scss */
+#header {
+  background: #002157;
+  /*ul.navbar-nav {
+    margin: 0;
+
+    li.dropdown {
+
+      ul.dropdown-menu {
+        background: $cornflower;
+        border-radius: 0;
+
+        li {
+          padding: 0;
+
+          &:hover {
+            border-radius: 0;
+            border-bottom: 1px solid #ccc;
+          }
+        }
+      }
+    }
+  }*/
+}
+/* line 4, ../sass/partials/_header.scss */
+#header #brand {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+/* line 10, ../sass/partials/_header.scss */
+#header .contact {
+  text-align: center;
+}
+/* line 16, ../sass/partials/_header.scss */
+#header nav.navbar .navbar-header {
+  /* navbar toggle button */
+}
+/* line 18, ../sass/partials/_header.scss */
+#header nav.navbar .navbar-header button.navbar-toggle {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: #373477;
+  box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  float: none;
+}
+/* line 28, ../sass/partials/_header.scss */
+#header nav.navbar .navbar-header button.navbar-toggle .icon-bar {
+  background: #fff;
+}
+/* line 34, ../sass/partials/_header.scss */
+#header nav.navbar #chn-navbar {
+  /*weird jump, may not be right selector to target, was .navbar-collapse*/
+  margin-top: 20px;
+}
+/* line 37, ../sass/partials/_header.scss */
+#header nav.navbar #chn-navbar ul.navbar-nav {
+  margin: 0;
+}
+/* line 42, ../sass/partials/_header.scss */
+#header nav.navbar #chn-navbar ul.navbar-nav li :hover {
   background: rgba(103, 118, 173, 0.5);
   box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
 }
-/* line 145, ../sass/styles.scss */
-body header ul.nav li a {
+/* line 47, ../sass/partials/_header.scss */
+#header nav.navbar #chn-navbar ul.navbar-nav li a {
   color: #fff;
   padding: 10px 15px;
   text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
   text-align: center;
 }
-/* line 154, ../sass/styles.scss */
-body header .navbar-nav {
-  margin: 0;
+
+/* line 3, ../sass/partials/_footer.scss */
+#footer .inner-foot {
+  border-top: 1px solid #fff;
+  padding: 10px 0 90px 0;
 }
-/* line 161, ../sass/styles.scss */
-body main {
-  background: #373477;
-  color: #fff;
+/* line 7, ../sass/partials/_footer.scss */
+#footer .inner-foot #foot-contact,
+#footer .inner-foot #copyright {
+  text-align: center;
+}
+
+/**********************
+******** Sass *********
+**********************/
+/* line 10, ../sass/styles.scss */
+main {
+  /* homepage */
   border-top: 4px solid #bbcb72;
 }
-/* line 166, ../sass/styles.scss */
-body main h1 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  font-style: italic;
-  line-height: 1.6em;
-  text-align: center;
+/* line 13, ../sass/styles.scss */
+main h1 {
   text-align: center;
 }
-/* line 171, ../sass/styles.scss */
-body main h2 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  font-style: italic;
-  line-height: 1.6em;
-}
-/* line 175, ../sass/styles.scss */
-body main p {
-  color: #fff;
-}
-/* line 179, ../sass/styles.scss */
-body main .inner-content {
+/* line 17, ../sass/styles.scss */
+main .inner-content {
   padding: 0 15px;
   position: relative;
 }
-/* line 183, ../sass/styles.scss */
-body main .inner-content h2 {
+/* line 21, ../sass/styles.scss */
+main .inner-content h2 {
   background: rgba(187, 203, 114, 0.5);
   margin: 0 -15px;
   padding: 0 15px;
 }
-/* line 190, ../sass/styles.scss */
-body main .message {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  font-style: italic;
-  line-height: 1.6em;
+/* line 28, ../sass/styles.scss */
+main .message {
   text-align: center;
   margin: 30px 0;
 }
-/* line 196, ../sass/styles.scss */
-body main .box {
+/* line 33, ../sass/styles.scss */
+main .home-box {
   background: #bbcb72;
   min-height: 520px;
   border-radius: 3px;
 }
-/* line 201, ../sass/styles.scss */
-body main .box img {
+/* line 38, ../sass/styles.scss */
+main .home-box img {
   padding-right: -15px;
   padding-left: -15px;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
   margin-bottom: -25px;
 }
-/* line 209, ../sass/styles.scss */
-body main .box h2, body main .box p {
+/* line 46, ../sass/styles.scss */
+main .home-box h2, main .home-box p {
   color: #373477;
 }
-/* line 213, ../sass/styles.scss */
-body main .box .tagline {
+/* line 50, ../sass/styles.scss */
+main .home-box .tagline {
   font-family: "Times New Roman", Times, serif;
   font-size: 14px;
   font-style: italic;
@@ -167,60 +234,33 @@ body main .box .tagline {
   font-style: normal;
   font-weight: 700;
 }
-/* line 218, ../sass/styles.scss */
-body main .img-content {
-  /*two-column-left content area styling*/
+/* line 55, ../sass/styles.scss */
+main .img-content {
+  /*two-column-left content area styling - will actually become three columns*/
 }
-/* line 220, ../sass/styles.scss */
-body main .img-content p {
-  color: #fff !important;
-}
-/* line 224, ../sass/styles.scss */
-body main .img-content img.feature-image {
-  display: inline-block !important;
-  float: right !important;
-}
-/* line 231, ../sass/styles.scss */
-body footer {
-  color: #fff;
-  background: #373477;
-}
-/* line 236, ../sass/styles.scss */
-body footer .inner-foot {
-  border-top: 1px solid #fff;
-  padding: 10px 0 90px 0;
-}
-/* line 240, ../sass/styles.scss */
-body footer .inner-foot #foot-contact,
-body footer .inner-foot #copyright {
-  text-align: center;
-}
-/* line 246, ../sass/styles.scss */
-body footer a {
-  color: #fff;
-}
-/* line 249, ../sass/styles.scss */
-body footer a :hover {
-  color: #fff;
+/* line 57, ../sass/styles.scss */
+main .img-content img.feature-image {
+  display: inline-block;
+  float: right;
 }
 
 /* Bootstrap Overrides */
-/* line 257, ../sass/styles.scss */
+/* line 66, ../sass/styles.scss */
 .container-fluid {
   padding: 0;
 }
 
-/* line 258, ../sass/styles.scss */
+/* line 67, ../sass/styles.scss */
 [class*="col"] {
   padding: 0;
 }
 
-/* line 259, ../sass/styles.scss */
+/* line 68, ../sass/styles.scss */
 .row {
   margin: 0;
 }
 
-/* line 260, ../sass/styles.scss */
+/* line 69, ../sass/styles.scss */
 body {
   color: #fff;
 }
@@ -232,140 +272,117 @@ body {
 /* No media query since this is the default in Bootstrap */
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  /* line 6, ../sass/partials/_media-queries.scss */
-  body {
-    background: #002157;
-  }
-  /* line 11, ../sass/partials/_media-queries.scss */
-  body header .navbar-toggle {
-    background: #373477;
-    box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
-  }
-  /* line 15, ../sass/partials/_media-queries.scss */
-  body header .navbar-toggle .icon-bar {
-    background: #fff;
-  }
-  /* line 20, ../sass/partials/_media-queries.scss */
-  body header #brand {
+  /* line 9, ../sass/partials/_media-queries.scss */
+  #header #brand {
     display: inline-block;
     margin: 0 0 10px 0;
   }
-  /* line 25, ../sass/partials/_media-queries.scss */
-  body header .contact {
+  /* line 14, ../sass/partials/_media-queries.scss */
+  #header .contact {
     margin-top: 40px;
     text-align: right;
   }
-  /* line 30, ../sass/partials/_media-queries.scss */
-  body header .contact p, body header .contact a {
-    color: #fff;
+  /* line 21, ../sass/partials/_media-queries.scss */
+  #header nav.navbar #chn-navbar {
+    /* This section feels wrong */
+    /* This section feels wrong */
   }
-  /* line 34, ../sass/partials/_media-queries.scss */
-  body header .contact button {
-    color: #fff;
-    background: #002157;
-    width: 150px;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    text-transform: uppercase;
-    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
-    box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
-    font-size: 8px;
-    letter-spacing: 1px;
-    font-weight: 700;
-    padding: 10px;
-  }
-  /* line 49, ../sass/partials/_media-queries.scss */
-  body header .contact .btn:hover {
-    background: rgba(103, 118, 173, 0.5);
-    color: #fff;
-    border: 0;
-  }
-  /* line 60, ../sass/partials/_media-queries.scss */
-  body header ul.nav li :hover {
+  /* line 27, ../sass/partials/_media-queries.scss */
+  #header nav.navbar #chn-navbar ul.navbar-nav li :hover {
     background: rgba(103, 118, 173, 0.5);
     border-radius: 20px;
     box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
   }
-  /* line 66, ../sass/partials/_media-queries.scss */
-  body header ul.nav li a {
+  /* line 33, ../sass/partials/_media-queries.scss */
+  #header nav.navbar #chn-navbar ul.navbar-nav li a {
     color: #fff;
     padding: 10px 15px;
     text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
   }
-  /* line 74, ../sass/partials/_media-queries.scss */
-  body header .navbar-nav {
-    margin: 0;
+  /* line 39, ../sass/partials/_media-queries.scss */
+  #header nav.navbar #chn-navbar ul.navbar-nav li ul.dropdown-menu {
+    padding: 0;
+    background: #6776ad;
+    border-radius: 3px;
+    border-top-left-radius: 0;
   }
-  /* line 81, ../sass/partials/_media-queries.scss */
-  body main {
+  /* line 46, ../sass/partials/_media-queries.scss */
+  #header nav.navbar #chn-navbar ul.navbar-nav li ul.dropdown-menu :hover {
+    border-radius: 3px;
+    background: #6776ad;
+  }
+  /* line 53, ../sass/partials/_media-queries.scss */
+  #header nav.navbar #chn-navbar ul.navbar-nav li ul.dropdown-menu li :hover {
+    background: rgba(187, 203, 114, 0.5);
+    border-radius: 0;
+    box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+  /* line 59, ../sass/partials/_media-queries.scss */
+  #header nav.navbar #chn-navbar ul.navbar-nav li ul.dropdown-menu li a {
+    color: #fff;
+  }
+  /* line 69, ../sass/partials/_media-queries.scss */
+  #header nav.navbar #chn-navbar .nav > li > a:focus {
+    background: rgba(103, 118, 173, 0.5);
+    border-radius: 20px;
+  }
+  /* line 74, ../sass/partials/_media-queries.scss */
+  #header nav.navbar #chn-navbar .nav .open > a, #header nav.navbar #chn-navbar .nav > li.dropdown > a:focus {
+    /*selected main nav item for dropdown*/
+    background: rgba(103, 118, 173, 0.5);
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  /* line 85, ../sass/partials/_media-queries.scss */
+  main {
     background: #373477;
     border-top: 4px solid #bbcb72;
   }
-  /* line 85, ../sass/partials/_media-queries.scss */
-  body main h1 {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 700;
-    font-style: italic;
-    line-height: 1.6em;
-    text-align: center;
+  /* line 89, ../sass/partials/_media-queries.scss */
+  main h1 {
     text-align: center;
     padding: 0 40px !important;
   }
-  /* line 91, ../sass/partials/_media-queries.scss */
-  body main h2 {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    font-style: italic;
-    line-height: 1.6em;
-  }
-  /* line 95, ../sass/partials/_media-queries.scss */
-  body main .inner-content {
+  /* line 94, ../sass/partials/_media-queries.scss */
+  main .inner-content {
     padding: 0 15px;
     position: relative;
   }
-  /* line 99, ../sass/partials/_media-queries.scss */
-  body main .inner-content h2 {
+  /* line 98, ../sass/partials/_media-queries.scss */
+  main .inner-content h2 {
     background: rgba(187, 203, 114, 0.5);
     margin: 0 -15px;
     padding: 0 15px;
   }
-  /* line 106, ../sass/partials/_media-queries.scss */
-  body main .message {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    font-style: italic;
-    line-height: 1.6em;
+  /* line 105, ../sass/partials/_media-queries.scss */
+  main .message {
     text-align: center;
     margin: 30px 0 90px 0;
     padding-left: 50px;
   }
-  /* line 113, ../sass/partials/_media-queries.scss */
-  body main .box {
+  /* line 111, ../sass/partials/_media-queries.scss */
+  main .home-box {
     background: #bbcb72;
     margin-right: 20px;
-    min-height: 520px;
+    min-height: 550px;
     border-radius: 3px;
   }
-  /* line 119, ../sass/partials/_media-queries.scss */
-  body main .box img {
+  /* line 117, ../sass/partials/_media-queries.scss */
+  main .home-box img {
     padding-right: -15px;
     padding-left: -15px;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
     margin-bottom: -25px;
   }
-  /* line 127, ../sass/partials/_media-queries.scss */
-  body main .box h2, body main .box p {
+  /* line 125, ../sass/partials/_media-queries.scss */
+  main .home-box h2, main .home-box p {
     color: #373477;
   }
-  /* line 131, ../sass/partials/_media-queries.scss */
-  body main .box .tagline {
+  /* line 129, ../sass/partials/_media-queries.scss */
+  main .home-box .tagline {
     font-family: "Times New Roman", Times, serif;
     font-size: 14px;
     font-style: italic;
@@ -374,32 +391,22 @@ body {
     font-style: normal;
     font-weight: 700;
   }
+
   /* line 137, ../sass/partials/_media-queries.scss */
-  body footer {
-    color: #fff;
-    background: #373477;
-  }
-  /* line 142, ../sass/partials/_media-queries.scss */
-  body footer .inner-foot {
+  #footer .inner-foot {
     border-top: 1px solid #fff;
     padding: 10px 0 90px 0;
   }
-  /* line 146, ../sass/partials/_media-queries.scss */
-  body footer .inner-foot #foot-contact {
+  /* line 141, ../sass/partials/_media-queries.scss */
+  #footer .inner-foot #foot-contact {
     text-align: initial;
   }
-  /* line 150, ../sass/partials/_media-queries.scss */
-  body footer .inner-foot #copyright {
+  /* line 145, ../sass/partials/_media-queries.scss */
+  #footer .inner-foot #copyright {
     text-align: right;
   }
-  /* line 155, ../sass/partials/_media-queries.scss */
-  body footer a {
-    color: #fff;
-  }
-  /* line 159, ../sass/partials/_media-queries.scss */
-  body footer a:hover {
-    color: #fff;
-  }
+
+  /*}*/
 }
 /* Medium devices (desktops, 992px and up) */
 /*@media (min-width: 992px) { ... }*/

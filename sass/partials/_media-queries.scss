@@ -3,79 +3,83 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  body {
-    background: $dk-blue;
 
-    header {
+    #header {
 
-        .navbar-toggle {
-          background: $navy;
-          @include bx-shadow;
-
-          .icon-bar {
-            background: $white;
-          }
-        }
-
-        #brand {
+      #brand {
           display: inline-block;
           margin: 0 0 10px 0;
         }
 
         .contact {
-
           margin-top: 40px;
           text-align: right;
-
-          p, a {
-            color: $white;
-          }
-
-          button {
-            color: $white;
-            background: $dk-blue;
-            width: 150px;
-            border: 1px solid $white;
-            border-radius: 20px;
-            text-transform: uppercase;
-            @include txt-shadow;
-            @include bx-shadow;
-            font-size: 8px;
-            letter-spacing: 1px;
-            font-weight: 700;
-            padding: 10px;
-          }
-
-          .btn:hover {
-            background: $cornflower-op;
-            color: $white;
-            border: 0;
-          }
         }
 
-        ul.nav {
+        nav.navbar {
 
-          li {
+          #chn-navbar {
 
-            :hover {
-                background: $cornflower-op;
-                border-radius: 20px;
-                @include bx-shadow;
+            ul.navbar-nav {
+
+              li {
+
+                :hover {
+                    background: $cornflower-op;
+                    border-radius: 20px;
+                    @include bx-shadow;
+                }
+
+                a {
+                  color: $white;
+                  padding: 10px 15px;
+                  @include txt-shadow;
+                }
+
+                ul.dropdown-menu {
+                  padding: 0;
+
+                  background: $cornflower;
+                  border-radius: 3px;
+                  border-top-left-radius: 0;
+
+                  :hover {
+                    border-radius: 3px;
+                    background: $cornflower;
+                  }
+
+                  li {
+
+                    :hover {
+                      background: $lt-green-op;
+                      border-radius: 0;
+                      @include bx-shadow;
+                    }
+
+                    a {
+                      color: $white;
+                    }
+
+                  }
+
+                }
               }
-
-            a {
-              color: $white;
-              padding: 10px 15px;
-              @include txt-shadow;
             }
+            /* This section feels wrong */
+            .nav>li>a:focus {
+              background: $cornflower-op;
+              border-radius: 20px;
+            }
+
+            .nav .open>a, .nav>li.dropdown>a:focus { /*selected main nav item for dropdown*/
+              background: $cornflower-op;
+              border-radius: 0;
+              border-top-left-radius: 3px;
+              border-top-right-radius: 3px;
+            }
+            /* This section feels wrong */
           }
         }
-
-        .navbar-nav {
-
-          margin: 0;
-        }
-
       }
 
       main {
@@ -83,13 +87,8 @@
         border-top: 4px solid $lt-green;
 
         h1 {
-          @include heading1;
           text-align: center;
           padding: 0 40px !important;
-        }
-
-        h2 {
-          @include heading2;
         }
 
         .inner-content {
@@ -104,16 +103,15 @@
         }
 
         .message {
-          @include heading2;
           text-align: center;
           margin: 30px 0 90px 0;
           padding-left: 50px;
         }
 
-        .box {
+        .home-box {
           background: $lt-green;
           margin-right: 20px;
-          min-height: 520px;
+          min-height: 550px;
           border-radius: 3px;
 
           img {
@@ -134,10 +132,7 @@
         }
       }
 
-      footer {
-
-        color: $white;
-        background: $navy;
+      #footer {
 
         .inner-foot {
           border-top: 1px solid $white;
@@ -151,16 +146,8 @@
             text-align: right;
           }
         }
-
-        a {
-          color: $white;
-        }
-
-        a:hover {
-          color: $white;
-        }
       }
-    }
+    /*}*/
   }
 
 /* Medium devices (desktops, 992px and up) */

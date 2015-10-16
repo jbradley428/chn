@@ -1,0 +1,86 @@
+#header {
+  background: $dk-blue;
+
+  #brand {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .contact {
+    text-align: center;
+  }
+
+  nav.navbar {
+
+    .navbar-header { /* navbar toggle button */
+
+      button.navbar-toggle {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        background: $navy;
+        @include bx-shadow;
+        padding: 10px;
+        float: none;
+
+        .icon-bar {
+          background: $white;
+        }
+      }
+    }
+
+    #chn-navbar { /*weird jump, may not be right selector to target, was .navbar-collapse*/
+      margin-top: 20px;
+
+      ul.navbar-nav {
+      margin: 0;
+
+        li {
+
+          :hover {
+              background: $cornflower-op;
+              @include bx-shadow;
+              }
+
+          a {
+            color: $white;
+            padding: 10px 15px;
+            @include txt-shadow;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+  /*ul.navbar-nav {
+    margin: 0;
+
+    li.dropdown {
+
+      ul.dropdown-menu {
+        background: $cornflower;
+        border-radius: 0;
+
+        li {
+          padding: 0;
+
+          &:hover {
+            border-radius: 0;
+            border-bottom: 1px solid #ccc;
+          }
+        }
+      }
+    }
+  }*/
+}

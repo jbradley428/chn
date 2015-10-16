@@ -1,12 +1,75 @@
-/* Variables */
-@import 'variables';
+/* ==========================================================================
+   BASE
+   - Styles for default base elements
+   - Boostrap grid overrides
+   ========================================================================== */
 
-/* Mixins */
-@import 'mixins';
-
-/*-------------------------*/
 
 body {
-
+  font-family: $helvetica;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
   color: $white;
+  background: $navy;
 }
+
+a {
+  color: $lt-blue;
+  text-decoration: none;
+  &:hover {
+    color: $lt-green;
+    text-decoration: none;
+  }
+}
+
+b, strong {}
+i, em {}
+p {}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5;
+  font-style: italic;
+  font-weight: 700;
+  color: $white;
+  font-family: $georgia;
+  margin-bottom: 12px;
+}
+h1 { font-size: 20px; }
+h2 { font-size: 18px; }
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+ol, ul {}
+li {}
+
+hr {}
+
+button.btn {
+    color: $white;
+    background: $dk-blue;
+    width: 150px;
+    border: 1px solid $white;
+    border-radius: 20px;
+    text-transform: uppercase;
+    @include txt-shadow;
+    @include bx-shadow;
+    font-size: 8px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 10px;
+
+    &:hover {
+      background: $cornflower-op;
+      color: $white;
+      border: 1px solid $navy;
+    }
+  }
+
+
+/* Bootstrap Overrides */
+.container-fluid { padding: 0; }
+[class*="col"] { padding: 0; }
+.row { margin: 0; }
+
