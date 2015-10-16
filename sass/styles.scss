@@ -1,6 +1,7 @@
 @import 'partials/variables';
 @import 'partials/mixins';
 @import 'partials/base';
+@import 'partials/modular-classes';
 @import 'partials/header';
 @import 'partials/footer';
 
@@ -8,7 +9,6 @@
 ******** Sass *********
 **********************/
 main { /* homepage */
-  border-top: 4px solid $lt-green;
 
   h1 {
     text-align: center;
@@ -52,21 +52,67 @@ main { /* homepage */
     }
   }
 
+  .side-nav { /*Side Nav*/
+    position: relative;
+    display: block;
+
+    nav {
+
+      ul {
+
+        &:first-child { /*used this to change bullet color*/
+          color: $cornflower;
+        }
+
+        li {
+
+          &:first-child { /*Selects first child in side menu*/
+            color: $white;
+            list-style: none;
+            text-transform: uppercase;
+            margin-left: -20px;
+            margin-top: 25px;
+            font-size: 9px;
+            font-weight: 700;
+          }
+
+          a {
+            color: $cornflower;
+            font-size: 11px;
+
+            &:hover {
+              color: $lt-green;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .img-content { /*two-column-left content area styling - will actually become three columns*/
+    display: block;
+    padding: 0 25px;
 
     img.feature-image {
       display: inline-block;
       float: right;
+      padding: 0 0 5px 5px;
+    }
+  }
+
+  .quote-box {
+    position: relative;
+    display: block;
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+    clear: both;
+
+    img {
+      margin: 0 auto;
     }
   }
 }
-
-
-/* Bootstrap Overrides */
-.container-fluid { padding: 0; }
-[class*="col"] { padding: 0; }
-.row { margin: 0; }
-body { color: #fff;}
 
 /**********************
 **** Media Queries ****

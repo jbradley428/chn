@@ -1,5 +1,6 @@
 #header {
   background: $dk-blue;
+  border-bottom: 4px solid $lt-green;
 
   #brand {
     display: block;
@@ -54,33 +55,84 @@
       }
     }
   }
+}
 
+/*---- Media Query ----*/
+@media (min-width: 768px) {
 
+  #header {
 
+    #brand {
+      display: inline-block;
+      margin: 0 0 10px 0;
+    }
 
+    .contact {
+      margin-top: 40px;
+      text-align: right;
+    }
 
+    nav.navbar {
 
+      #chn-navbar {
 
+        ul.navbar-nav {
 
+          li {
 
-  /*ul.navbar-nav {
-    margin: 0;
+            :hover {
+                background: $cornflower-op;
+                border-radius: 20px;
+                @include bx-shadow;
+            }
 
-    li.dropdown {
+            a {
+              color: $white;
+              padding: 10px 15px;
+              @include txt-shadow;
+            }
 
-      ul.dropdown-menu {
-        background: $cornflower;
-        border-radius: 0;
+            ul.dropdown-menu {
+              padding: 0;
 
-        li {
-          padding: 0;
+              background: $cornflower;
+              border-radius: 3px;
+              border-top-left-radius: 0;
 
-          &:hover {
-            border-radius: 0;
-            border-bottom: 1px solid #ccc;
+              :hover {
+                border-radius: 3px;
+                background: $cornflower;
+              }
+
+              li {
+
+                :hover {
+                  background: $lt-green-op;
+                  border-radius: 0;
+                  @include bx-shadow;
+                }
+
+                a {
+                  color: $white;
+                }
+              }
+            }
           }
         }
+        /* This section feels wrong */
+        .nav>li>a:focus {
+          background: $cornflower-op;
+          border-radius: 20px;
+        }
+
+        .nav .open>a, .nav>li.dropdown>a:focus { /*selected main nav item for dropdown*/
+          background: $cornflower-op;
+          border-radius: 0;
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
+        }
+        /* This section feels wrong */
       }
     }
-  }*/
+  }
 }

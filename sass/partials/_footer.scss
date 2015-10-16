@@ -1,4 +1,5 @@
 #footer {
+  margin-top: 20px;
 
   .inner-foot {
     border-top: 1px solid $white;
@@ -7,6 +8,24 @@
     #foot-contact,
     #copyright {
       text-align: center;
+    }
+  }
+}
+/*------ Media Query -------*/
+@media (min-width: 768px) {
+    #footer {
+
+    .inner-foot {
+      border-top: 1px solid $white;
+      padding: 10px 0 90px 0;
+
+      #foot-contact {
+        text-align: initial;
+      }
+
+      #copyright {
+        text-align: right;
+      }
     }
   }
 }

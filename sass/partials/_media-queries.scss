@@ -4,151 +4,72 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
-    #header {
+  main {
+    background: $navy;
 
-      #brand {
-          display: inline-block;
-          margin: 0 0 10px 0;
-        }
+    h1 {
+      text-align: center;
+      padding: 0 40px !important;
+    }
 
-        .contact {
-          margin-top: 40px;
-          text-align: right;
-        }
+    .inner-content {
+      padding: 0 15px;
+      position: relative;
 
-        nav.navbar {
+      h2 {
+        background: $lt-green-op;
+        margin: 0 -15px;
+        padding: 0 15px;
+      }
+    }
 
-          #chn-navbar {
+    .message {
+      text-align: center;
+      margin: 30px 0 90px 0;
+      padding-left: 50px;
+    }
 
-            ul.navbar-nav {
+    .home-box {
+      background: $lt-green;
+      margin-right: 20px;
+      min-height: 550px;
+      border-radius: 3px;
 
-              li {
-
-                :hover {
-                    background: $cornflower-op;
-                    border-radius: 20px;
-                    @include bx-shadow;
-                }
-
-                a {
-                  color: $white;
-                  padding: 10px 15px;
-                  @include txt-shadow;
-                }
-
-                ul.dropdown-menu {
-                  padding: 0;
-
-                  background: $cornflower;
-                  border-radius: 3px;
-                  border-top-left-radius: 0;
-
-                  :hover {
-                    border-radius: 3px;
-                    background: $cornflower;
-                  }
-
-                  li {
-
-                    :hover {
-                      background: $lt-green-op;
-                      border-radius: 0;
-                      @include bx-shadow;
-                    }
-
-                    a {
-                      color: $white;
-                    }
-
-                  }
-
-                }
-              }
-            }
-            /* This section feels wrong */
-            .nav>li>a:focus {
-              background: $cornflower-op;
-              border-radius: 20px;
-            }
-
-            .nav .open>a, .nav>li.dropdown>a:focus { /*selected main nav item for dropdown*/
-              background: $cornflower-op;
-              border-radius: 0;
-              border-top-left-radius: 3px;
-              border-top-right-radius: 3px;
-            }
-            /* This section feels wrong */
-          }
-        }
+      img {
+        padding-right: -15px;
+        padding-left: -15px;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        margin-bottom: -25px;
       }
 
-      main {
-        background: $navy;
-        border-top: 4px solid $lt-green;
-
-        h1 {
-          text-align: center;
-          padding: 0 40px !important;
-        }
-
-        .inner-content {
-          padding: 0 15px;
-          position: relative;
-
-          h2 {
-            background: $lt-green-op;
-            margin: 0 -15px;
-            padding: 0 15px;
-          }
-        }
-
-        .message {
-          text-align: center;
-          margin: 30px 0 90px 0;
-          padding-left: 50px;
-        }
-
-        .home-box {
-          background: $lt-green;
-          margin-right: 20px;
-          min-height: 550px;
-          border-radius: 3px;
-
-          img {
-            padding-right: -15px;
-            padding-left: -15px;
-            border-top-right-radius: 3px;
-            border-top-left-radius: 3px;
-            margin-bottom: -25px;
-          }
-
-          h2, p {
-            color: $navy;
-          }
-
-          .tagline {
-            @include blurb;
-          }
-        }
+      h2, p {
+        color: $navy;
       }
 
-      #footer {
-
-        .inner-foot {
-          border-top: 1px solid $white;
-          padding: 10px 0 90px 0;
-
-          #foot-contact {
-            text-align: initial;
-          }
-
-          #copyright {
-            text-align: right;
-          }
-        }
+      .tagline {
+        @include blurb;
       }
-    /*}*/
+    }
+
+    .side-nav {
+      display: inline-block;
+      text-align: left;
+    }
+
+    .img-content { /*two-column-left content area styling - will actually become three columns*/
+      display: inline-block;
+      padding: 0;
+    }
+
+    .quote-box {
+      display: inline-block;
+      text-align: left;
+      margin: 20px 0 0 45px;
+      clear: none;
+    }
   }
+}
 
 /* Medium devices (desktops, 992px and up) */
 /*@media (min-width: 992px) { ... }*/
