@@ -1,13 +1,14 @@
 .quote-box {
   background: $lt-green;
   color: $navy;
-  margin: 20px 0 0 45px;
+  /*margin: 20px 0 0 45px;*/
+  margin-top: 20px;
   padding: 15px;
   border-radius: 3px;
 }
 
 .quote {
-  font-family: "Times New Roman", Times, serif;
+  font-family: $times;
   font-size: 14px;
   font-style: italic;
   line-height: 1.6em;

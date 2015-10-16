@@ -96,12 +96,13 @@ button.btn:hover {
 .quote-box {
   background: #bbcb72;
   color: #373477;
-  margin: 20px 0 0 45px;
+  /*margin: 20px 0 0 45px;*/
+  margin-top: 20px;
   padding: 15px;
   border-radius: 3px;
 }
 
-/* line 9, ../sass/partials/_modular-classes.scss */
+/* line 10, ../sass/partials/_modular-classes.scss */
 .quote, .sig {
   font-family: "Times New Roman", Times, serif;
   font-size: 14px;
@@ -109,7 +110,7 @@ button.btn:hover {
   line-height: 1.6em;
 }
 
-/* line 16, ../sass/partials/_modular-classes.scss */
+/* line 17, ../sass/partials/_modular-classes.scss */
 .sig {
   font-weight: 700;
 }
@@ -370,10 +371,9 @@ main .quote-box {
   display: block;
   text-align: center;
   float: none;
-  margin: 0 auto;
   clear: both;
 }
-/* line 111, ../sass/styles.scss */
+/* line 110, ../sass/styles.scss */
 main .quote-box img {
   margin: 0 auto;
 }
@@ -455,7 +455,6 @@ main .quote-box img {
   main .quote-box {
     display: inline-block;
     text-align: left;
-    margin: 20px 0 0 45px;
     clear: none;
   }
 }
